@@ -23,3 +23,15 @@ This repository contains my step-by-step progress through the Neurofive Solution
 
 ## 📊 Final Model Accuracy
 * **Accuracy Score:** **~80%** on unseen test data.
+
+### 4. Advanced Evaluation & Hyperparameter Tuning (Task 5)
+* **Metric Shift:** Beyond accuracy, evaluated model performance using **Precision**, **Recall**, and **F1-Score** to handle target class imbalance effectively.
+* **Hyperparameter Optimization:** Used 5-fold cross-validated `GridSearchCV` across `C` regularization values and `solver` algorithms.
+* **Performance Comparison:**
+
+| Metric | Baseline Model | Tuned Model |
+| :--- | :--- | :--- |
+| **Accuracy** | 0.8101 | **0.8156** |
+| **Precision** | 0.7857 | **0.8030** |
+| **Recall** | 0.7432 | **0.7162** |
+| **F1-Score** | 0.7639 | **0.7571** |
