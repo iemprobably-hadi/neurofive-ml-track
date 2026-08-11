@@ -49,3 +49,16 @@ This repository contains my step-by-step progress through the Neurofive Solution
 * **Feature Engineering:** Added `FamilySize` (`SibSp` + `Parch` + 1) and `IsAlone` binary indicator to capture family grouping survival dynamics.
 * **Modular Architecture:** Used `ColumnTransformer` (`StandardScaler` for continuous numerical features, `OneHotEncoder` for categorical variables) combined with `LogisticRegression` into a unified `Pipeline`.
 * **Model Serialization:** Exported the complete trained pipeline via `joblib` as `titanic_pipeline.joblib` for deployment readiness.
+
+
+### 7. Ensemble Learning & Feature Comparison (Task 8)
+* **Model Comparison Table:**
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+| :--- | :--- | :--- | :--- | :--- |
+| **Logistic Regression** | 0.8101 | 0.7857 | 0.7432 | 0.7639 |
+| **Decision Tree (Single)** | 0.7821 | 0.7619 | 0.6809 | 0.7191 |
+| **Random Forest (Bagging)** | 0.8212 | 0.8209 | 0.7237 | 0.7692 |
+| **XGBoost (Boosting)** | **0.8324** | **0.8382** | **0.7500** | **0.7917** |
+
+* **Key Takeaway:** Ensemble models consistently outperformed single decision boundaries. XGBoost achieved top performance by sequentially minimizing residual errors via gradient boosting.
