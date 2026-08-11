@@ -62,3 +62,17 @@ This repository contains my step-by-step progress through the Neurofive Solution
 | **XGBoost (Boosting)** | **0.8324** | **0.8382** | **0.7500** | **0.7917** |
 
 * **Key Takeaway:** Ensemble models consistently outperformed single decision boundaries. XGBoost achieved top performance by sequentially minimizing residual errors via gradient boosting.
+
+
+### 8. Handling Class Imbalance with SMOTE & Class Weighting (Task 9)
+* **Problem Statement:** Evaluated target class skewness and addressed minority class underrepresentation.
+* **Resampling & Weighting Strategies:** Implemented `imbalanced-learn` SMOTE oversampling and `class_weight='balanced'`.
+* **Results Comparison:**
+
+| Technique | Precision (Minority) | Recall (Minority) | F1-Score (Minority) |
+| :--- | :--- | :--- | :--- |
+| **Unadjusted Baseline** | ~0.65 | ~0.52 | ~0.58 |
+| **Class Weighting (`balanced`)** | ~0.51 | **~0.79** | **~0.62** |
+| **SMOTE Oversampling** | ~0.50 | **~0.77** | ~0.61 |
+
+* **Key Takeaway:** Balancing techniques drastically boosted **Recall** (from ~52% to ~79%), ensuring the model catches the vast majority of rare minority class events.
