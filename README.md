@@ -35,3 +35,12 @@ This repository contains my step-by-step progress through the Neurofive Solution
 | **Precision** | 0.7857 | **0.8030** |
 | **Recall** | 0.7432 | **0.7162** |
 | **F1-Score** | 0.7639 | **0.7571** |
+
+### 5. Customer Churn Prediction & Decision Trees (Task 6)
+* **Dataset:** Telco Customer Churn dataset (7,043 customer accounts).
+* **Class Imbalance:** Noted target distribution (~73% retained vs ~27% churned).
+* **Models Trained:** Decision Tree Classifier (`max_depth=5`) vs. Logistic Regression.
+* **Top 3 Drivers of Churn:**
+  1. `Contract_Month-to-month`: High likelihood of immediate churn.
+  2. `tenure`: Newer customers are significantly more prone to leaving.
+  3. `TotalCharges` / `MonthlyCharges`: Price sensitivity impacts churn rate.
