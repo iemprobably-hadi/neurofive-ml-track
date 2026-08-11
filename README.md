@@ -44,3 +44,8 @@ This repository contains my step-by-step progress through the Neurofive Solution
   1. `Contract_Month-to-month`: High likelihood of immediate churn.
   2. `tenure`: Newer customers are significantly more prone to leaving.
   3. `TotalCharges` / `MonthlyCharges`: Price sensitivity impacts churn rate.
+
+  ### 6. Production-Grade Pipelines & Feature Engineering (Task 7)
+* **Feature Engineering:** Added `FamilySize` (`SibSp` + `Parch` + 1) and `IsAlone` binary indicator to capture family grouping survival dynamics.
+* **Modular Architecture:** Used `ColumnTransformer` (`StandardScaler` for continuous numerical features, `OneHotEncoder` for categorical variables) combined with `LogisticRegression` into a unified `Pipeline`.
+* **Model Serialization:** Exported the complete trained pipeline via `joblib` as `titanic_pipeline.joblib` for deployment readiness.
